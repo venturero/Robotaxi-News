@@ -91,6 +91,10 @@ def main():
         "https://research.facebook.com/feed/" : "META Research",
         "https://openai.com/news/rss.xml": "OpenAI News",
         "https://deepmind.google/blog/feed/basic/" : "Google DeepMind Blog",
+        "https://jamesg.blog/hf-papers.xml": "Hugging Face Papers",
+        "https://news.mit.edu/rss/topic/artificial-intelligence2": "MIT News - Artificial intelligence",
+        "https://www.technologyreview.com/topic/artificial-intelligence/feed": "MIT Technology Review - Artificial intelligence",
+        "https://rss.arxiv.org/rss/cs.AI" : "AI updates on arXiv"
     }
 
     df = fetch_feed(links)
@@ -101,3 +105,4 @@ def main():
 if __name__ == "__main__":
     df = main()
     print(df.columns)
+    df.to_excel("kontrol.xlsx")
