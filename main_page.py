@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from fetch_data import main
 
 # Veriyi bir defa alıyoruz ve önbelleğe alıyoruz
-@st.cache_data(ttl=600) 
+@st.cache_data(ttl=60) 
 def get_data():
     return main()
 
