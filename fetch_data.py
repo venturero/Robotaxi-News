@@ -93,8 +93,7 @@ def main():
         "https://deepmind.google/blog/feed/basic/" : "Google DeepMind Blog",
         "https://jamesg.blog/hf-papers.xml": "Hugging Face Papers",
         "https://news.mit.edu/rss/topic/artificial-intelligence2": "MIT News - Artificial intelligence",
-        "https://www.technologyreview.com/topic/artificial-intelligence/feed": "MIT Technology Review - Artificial intelligence",
-        "https://rss.arxiv.org/rss/cs.AI" : "AI updates on arXiv"
+        "https://www.technologyreview.com/topic/artificial-intelligence/feed": "MIT Technology Review - Artificial intelligence"
     }
 
     df = fetch_feed(links)
