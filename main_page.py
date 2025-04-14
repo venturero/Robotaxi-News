@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from fetch_data import main
 
 # Use Streamlit's built-in caching
-@st.cache_data(ttl=300)  # Cache for 5 minutes
+@st.cache_data(ttl=60)  # Cache for 1 minutes
 def get_data():
     with st.spinner('Fetching latest AI news...'):
         return main()
