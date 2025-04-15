@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from fetch_data import main
 
 # Use Streamlit's built-in caching
-@st.cache_data(ttl=60)  # Cache for 1 minutes
+@st.cache_data(ttl=60)  # Cache for 1 minute
 def get_data():
     with st.spinner('Fetching latest AI news...'):
         return main()
@@ -53,10 +53,13 @@ def run_dashboard():
             # Get unique sources
             all_sources = sorted(df['Source'].unique().tolist())
             
+            # Add "All" option at the beginning of the list
+            source_options = ["All"] + all_sources
+            
             # Use multiselect
             selected_sources = st.multiselect(
                 "Choose one or more sources",
-                options=all_sources
+                options=source_options
             )
         
         # Show button
@@ -71,8 +74,13 @@ def run_dashboard():
                 # Filter by date range
                 df_filtered = df[(df['date'] >= start_date) & (df['date'] <= end_date)]
                 
-                # Filter by selected sources
-                df_filtered = df_filtered[df_filtered['Source'].isin(selected_sources)]
+                # Handle "All" selection
+                if "All" in selected_sources:
+                    # If "All" is selected, don't filter by source
+                    pass
+                else:
+                    # Filter by selected sources
+                    df_filtered = df_filtered[df_filtered['Source'].isin(selected_sources)]
                 
                 # Display results
                 if len(df_filtered) > 0:
