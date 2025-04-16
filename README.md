@@ -5,7 +5,6 @@ This repository serves as a curated collection of the most recent and significan
 ## 📚 Contents
 
 This repository includes:
-- Summaries of recent AI research papers
 - News about major AI product releases
 - Updates on AI industry trends
 - Insights from AI conferences and events
