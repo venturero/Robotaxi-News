@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/cc4e65c2-1c96-448f-b323-84dbc3bea581
 # Latest AI News
 
 This repository serves as a curated collection of the most recent and significant developments in artificial intelligence. The goal is to provide AI enthusiasts, researchers, students, and professionals with a centralized resource to stay updated on breakthroughs, research papers, product launches, and industry trends.
@@ -17,7 +19,9 @@ Check out the live application: [Latest AI News App]([https://your-app-link-here
 ## 🎬 Demo
 
 Watch our video demonstration to see the app in action:
-[Video Demo](https://your-video-link-here.com)
+
+https://github.com/user-attachments/assets/1e236006-6ce8-4525-81a4-b1b7de5d858a
+
 
 ## 🔄 Updates
 
