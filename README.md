@@ -12,7 +12,7 @@ This repository includes:
 
 ## 🔗 App Link
 
-Check out the live application: [Latest AI News App]([https://your-app-link-here.com](https://latest-ai-news.streamlit.app/))
+Check out the live application: https://latest-ai-news.streamlit.app/
 
 ## 🎬 Demo
 
