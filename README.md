@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/0dcb67aa-3728-4ab8-aafd-1c591644ae33
 # Latest AI News
 
 This repository serves as a curated collection of the most recent and significant developments in artificial intelligence. The goal is to provide AI enthusiasts, researchers, students, and professionals with a centralized resource to stay updated on breakthroughs, research papers, product launches, and industry trends.
@@ -18,7 +20,8 @@ Check out the live application: https://latest-ai-news.streamlit.app/
 
 Watch our video demonstration to see the app in action:
 
-https://github.com/user-attachments/assets/1e236006-6ce8-4525-81a4-b1b7de5d858a 
+https://github.com/user-attachments/assets/f602e887-6179-4084-9aeb-9ecbefb2274b
+
 
 ## ✨ Features
 
