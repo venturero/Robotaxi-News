@@ -42,7 +42,7 @@ def run_dashboard():
         st.header("Filter Options")
         
         # Add a refresh button at the top of sidebar
-        if st.button("Refresh Data"):
+        if st.button("Refresh News"):
             # Clear the cache and get fresh data
             st.cache_data.clear()
             st.rerun()
