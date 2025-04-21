@@ -19,7 +19,8 @@ Check out the live application: https://latest-ai-news.streamlit.app/
 
 Watch our video demonstration to see the app in action:
 
-https://github.com/user-attachments/assets/f602e887-6179-4084-9aeb-9ecbefb2274b
+
+https://github.com/user-attachments/assets/1db2065e-766a-47f5-b23a-56aad8938841
 
 
 ## ✨ Features
