@@ -35,7 +35,7 @@ def get_data():
         return main()
 
 def run_dashboard():
-    st.title("Lates AI News")
+    st.title("Latest AI News")
     
     # Add sidebar for all filters
     with st.sidebar:
@@ -176,6 +176,7 @@ def run_dashboard():
             .news-description {
                 color: #333;
                 font-size: 13px;
+                padding-bottom: 10px;
                 line-height: 1.4;
                 display: -webkit-box;
                 -webkit-line-clamp: 5;
