@@ -255,7 +255,8 @@ def main():
         "https://www.technologyreview.com/topic/artificial-intelligence/feed": "MIT Technology Review - Artificial intelligence",
         "https://www.wired.com/feed/tag/ai/latest/rss": "Wired: Artificial Intelligence Latest",
         "https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_ollama.xml": "Ollama Blog",
-        "https://newsroom.ibm.com/press-releases-artificial-intelligence?pagetemplate=rss": "IBM - Announcements (Artificial intelligence)"
+        "https://newsroom.ibm.com/press-releases-artificial-intelligence?pagetemplate=rss": "IBM - Announcements (Artificial intelligence)",
+        "https://www.amazon.science/index.rss" : "Amazon Science"
     }
 
     # Fetch data from The Batch
