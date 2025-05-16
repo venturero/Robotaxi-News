@@ -244,19 +244,10 @@ def extract_and_clean_data(df):
 def main():
     # RSS links
     links = {
-        "https://bair.berkeley.edu/blog/feed.xml": "The Berkeley Artificial Intelligence Research Blog",
-        "https://feeds.feedburner.com/nvidiablog": "NVDIA Blog",
-        "https://www.microsoft.com/en-us/research/feed/": "Microsoft Research",
-        "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml": "Science Daily",
-        "https://research.facebook.com/feed/": "META Research",
-        "https://openai.com/news/rss.xml": "OpenAI News",
-        "https://deepmind.google/blog/feed/basic/": "Google DeepMind Blog",
-        "https://news.mit.edu/rss/topic/artificial-intelligence2": "MIT News - Artificial intelligence",
-        "https://www.technologyreview.com/topic/artificial-intelligence/feed": "MIT Technology Review - Artificial intelligence",
-        "https://www.wired.com/feed/tag/ai/latest/rss": "Wired: Artificial Intelligence Latest",
-        "https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_ollama.xml": "Ollama Blog",
-        "https://newsroom.ibm.com/press-releases-artificial-intelligence?pagetemplate=rss": "IBM - Announcements (Artificial intelligence)",
-        "https://www.amazon.science/index.rss" : "Amazon Science"
+        "https://thelastdriverlicenseholder.com/feed/": "The Last Driver License Holder",
+        "https://techcrunch.com/tag/waymo/feed/": "Tech Crunch Waymo",
+        "https://www.wired.com/feed/tag/waymo/latest/rss": "Wired: Waymo",
+        "https://feeds.arstechnica.com/arstechnica/cars": "Cars Arstechnica"
     }
 
     # Fetch data from The Batch
