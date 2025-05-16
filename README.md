@@ -1,5 +1,5 @@
 
-# Latest AI News
+# Latest Robotaxi News
 
 This repository serves as a curated collection of the most recent and significant developments in artificial intelligence. The goal is to provide AI enthusiasts, researchers, students, and professionals with a centralized resource to stay updated on breakthroughs, research papers, product launches, and industry trends.
 

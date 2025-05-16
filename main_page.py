@@ -23,19 +23,17 @@ else:
     PLACEHOLDER_IMAGE = "https://img.freepik.com/free-vector/artificial-intelligence-ai-robot-server-room-digital-technology-banner_39422-794.jpg"
     st.warning(f"Placeholder image not found at {PLACEHOLDER_IMAGE_PATH}. Using fallback image.")
 
-all_sources = ["The Berkeley Artificial Intelligence Research Blog","NVDIA Blog","Microsoft Research","Science Daily","META Research","OpenAI News",
-               "Google DeepMind Blog","MIT News - Artificial intelligence","MIT Technology Review - Artificial intelligence","Wired: Artificial Intelligence Latest",
-               "Ollama Blog","IBM - Announcements (Artificial intelligence)","deeplearning.ai"]
+all_sources = ["The Last Driver License Holder","Tech Crunch Waymo","Wired: Waymo","Cars Arstechnica"]
 
 
 # Use Streamlit's built-in caching
 @st.cache_data(ttl=60)  # Cache for 1 minute
 def get_data():
-    with st.spinner('Fetching latest AI news...'):
+    with st.spinner('Fetching latest Robotaxi news...'):
         return main()
 
 def run_dashboard():
-    st.title("Latest AI News")
+    st.title("Latest Robotaxi News")
     
     # Add sidebar for all filters
     with st.sidebar:
@@ -106,6 +104,8 @@ def run_dashboard():
         if selected_sources:  # If sources are selected
             # Filter by selected sources
             df_filtered = df_filtered[df_filtered['Source'].isin(selected_sources)]
+            print(df_filtered)
+            print(selected_sources)
         # If no sources selected, show all (no additional filtering needed)
         
         # Display results
