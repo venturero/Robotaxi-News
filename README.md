@@ -10,10 +10,7 @@ This repository includes:
 - Updates on AI industry trends
 - Insights from AI conferences and events
 - Resources for learning about new AI technologies
-
-## 🔗 App Link
-
-Check out the live application: https://latest-ai-news.streamlit.app/
+  
 
 ## 🎬 Demo
 
