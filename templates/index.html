@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest AI News</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800">Latest AI News</h1>
+            <button onclick="refreshNews()" class="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                Refresh News
+            </button>
+        </div>
+        
+        <!-- Filters -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Start Date</label>
+                    <input type="date" id="startDate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">End Date</label>
+                    <input type="date" id="endDate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Source</label>
+                    <select id="source" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="">All Sources</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <button onclick="applyFilters()" class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Apply Filters
+                </button>
+                <button onclick="clearFilters()" class="flex-1 bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                    Clear Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="hidden">
+            <div class="flex justify-center items-center py-8">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            </div>
+        </div>
+
+        <!-- News Grid -->
+        <div id="newsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- News cards will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Show loading indicator
+        function showLoading() {
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('newsGrid').classList.add('hidden');
+        }
+
+        // Hide loading indicator
+        function hideLoading() {
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('newsGrid').classList.remove('hidden');
+        }
+
+        // Fetch and display news
+        async function fetchNews(startDate = '', endDate = '', source = '') {
+            showLoading();
+            try {
+                // Build query parameters
+                const params = new URLSearchParams();
+                if (startDate) params.append('start_date', startDate);
+                if (endDate) params.append('end_date', endDate);
+                if (source) params.append('sources', source);
+
+                const response = await fetch(`/api/news?${params.toString()}`);
+                const news = await response.json();
+                displayNews(news);
+            } catch (error) {
+                console.error('Error fetching news:', error);
+                alert('Error fetching news. Please try again.');
+            } finally {
+                hideLoading();
+            }
+        }
+
+        // Fetch and populate sources
+        async function fetchSources() {
+            try {
+                const response = await fetch('/api/sources');
+                const sources = await response.json();
+                const sourceSelect = document.getElementById('source');
+                sourceSelect.innerHTML = '<option value="">All Sources</option>';
+                sources.forEach(source => {
+                    const option = document.createElement('option');
+                    option.value = source;
+                    option.textContent = source;
+                    sourceSelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error fetching sources:', error);
+                alert('Error fetching sources. Please try again.');
+            }
+        }
+
+        // Display news in the grid
+        function displayNews(news) {
+            const newsGrid = document.getElementById('newsGrid');
+            newsGrid.innerHTML = '';
+            
+            if (news.length === 0) {
+                newsGrid.innerHTML = `
+                    <div class="col-span-full text-center py-8">
+                        <p class="text-gray-600 text-lg">No news articles found matching your filters.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            news.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'news-card bg-white rounded-lg shadow-md overflow-hidden';
+                card.innerHTML = `
+                    <img src="${item.Image}" alt="${item.Title}" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold mb-2 text-gray-800">${item.Title}</h2>
+                        <p class="text-gray-600 mb-4">${item.Description}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">${item.Source}</span>
+                            <span class="text-sm text-gray-500">${item.date}</span>
+                        </div>
+                        <a href="${item.Link}" target="_blank" class="mt-4 block text-center bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+                            Read More
+                        </a>
+                    </div>
+                `;
+                newsGrid.appendChild(card);
+            });
+        }
+
+        // Apply filters
+        function applyFilters() {
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const source = document.getElementById('source').value;
+            fetchNews(startDate, endDate, source);
+        }
+
+        // Clear filters
+        function clearFilters() {
+            document.getElementById('startDate').value = '';
+            document.getElementById('endDate').value = '';
+            document.getElementById('source').value = '';
+            fetchNews();
+        }
+
+        // Refresh news
+        function refreshNews() {
+            fetchNews(
+                document.getElementById('startDate').value,
+                document.getElementById('endDate').value,
+                document.getElementById('source').value
+            );
+        }
+
+        // Initial load
+        fetchNews();
+        fetchSources();
+    </script>
+</body>
+</html>
+    

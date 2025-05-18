@@ -1,0 +1,8 @@
+
+    .news-card {
+        transition: transform 0.2s;
+    }
+    .news-card:hover {
+        transform: translateY(-5px);
+    }
+    
