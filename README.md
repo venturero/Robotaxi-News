@@ -2,6 +2,9 @@
 
 A modern web application that displays the latest news about robotaxis and autonomous vehicles from various sources.
 
+![image](https://github.com/user-attachments/assets/84be51f8-5088-4b40-b145-6392102badb0)
+
+
 ## Features
 
 - Modern, responsive UI built with React and Material-UI
@@ -58,26 +61,16 @@ This repository serves as a curated collection of the most recent and significan
 ## 📚 Contents
 
 This repository includes:
-- News about major AI product releases
-- Updates on AI industry trends
-- Insights from AI conferences and events
-- Resources for learning about new AI technologies
-  
-
-## 🎬 Demo
-
-Check out our visual demonstration to see the app in action:
-
-
-![image](https://github.com/user-attachments/assets/84be51f8-5088-4b40-b145-6392102badb0)
-
-
+- News about major RoboTaxi product releases
+- Updates on RoboTaxi industry trends
+- Insights from RoboTaxi conferences and events
+- Resources for learning about new RoboTaxi technologies
 
 ## ✨ Features
 
 - **Modern Card-Based Interface**: News displayed in an elegant three-column grid layout
 - **Responsive Design**: Works well on different screen sizes
-- **RSS Feed Integration**: Automatically pulls content from top AI news sources
+- **RSS Feed Integration**: Automatically pulls content from top Robotaxi news sources
 - **Smart Filtering**: Filter news by date range and source
 - **Customizable View**: Select specific news sources or view all content
 - **Real-time Updates**: Refresh data with a single click
@@ -89,13 +82,12 @@ This repository is updated regularly to ensure the content remains current and r
 
 ## 💻 Technical Details
 
-- **Framework**: Built with Streamlit for rapid development and easy deployment
-- **Data Sources**: Aggregates news from 12+ leading AI publications including:
+- **Framework**: Built with FastAPI and React
+- **Data Sources**: Aggregates news from 4 leading Robotaxi publications including:
   - Cars Arstechnica
   - Tech Crunch Waymo
   - deeplearning.ai
   - The Last Driver License Holder
-  - And more...
 - **Automatic Content Processing**: Handles different date formats and content structures
 - **Parallel Processing**: Uses concurrent fetching for faster data retrieval
 
@@ -109,13 +101,10 @@ Contributions are welcome! If you'd like to contribute to this repository:
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Open a Pull Request
 
-### Contribution Guidelines
-- Ensure all information is accurate and from reliable sources
-- Include references or links to original sources
-- Follow the existing formatting structure
+### Contributing
+Contributions are welcome! Please feel free to [submit](https://github.com/venturero/Robotaxi-News/pulls) a Pull Request.
 
 ## 📝 License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
@@ -130,4 +119,4 @@ If you find this repository useful, please consider giving it a star to help oth
 
 ---
 
-Created and maintained by [Buse Koseoglu](https://github.com/venturero)
+Created by [Buse Koseoglu](https://github.com/busekoseoglu/) and updated by [Semi Venturero](https://github.com/busekoseoglu/).
