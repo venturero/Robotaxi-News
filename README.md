@@ -49,10 +49,6 @@ latest-ai-news/
     - `sources`: Filter by news sources (can be multiple)
 - `GET /api/sources` - Get list of available news sources
 
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-=======
 
 # Latest Robotaxi News
 
