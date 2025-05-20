@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Latest AI News Dashboard
+# Latest Robotaxi-News Dashboard
 
 A modern web application that displays the latest news about robotaxis and autonomous vehicles from various sources.
 
@@ -15,57 +14,19 @@ A modern web application that displays the latest news about robotaxis and auton
 
 ```
 latest-ai-news/
-├── frontend/           # React frontend application
-│   ├── src/
-│   │   ├── components/ # React components
-│   │   ├── api.js      # API service
-│   │   └── App.js      # Main application component
-│   └── package.json    # Frontend dependencies
-├── backend/           # FastAPI backend application
-│   ├── app/
-│   │   └── main.py    # Backend API implementation
-│   └── requirements.txt # Backend dependencies
-└── README.md          # This file
+├── main_page.py              # Main FastAPI application file
+├── fetch_data.py            # Data fetching and processing module
+├── requirements.txt         # Python dependencies
+├── placeholder.jpeg         # Default image for news articles
+├── templates/              # HTML templates directory
+│   └── index.html         # Main webpage template
+├── static/                # Static files directory
+│   └── style.css         # CSS styles
+├── notebooks/            # Jupyter notebooks directory
+└── README.md            # Project documentation
 ```
 
 ## Setup Instructions
-
-### Backend Setup
-
-1. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-2. Install backend dependencies:
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   ```
-
-3. Start the backend server:
-   ```bash
-   uvicorn app.main:app --reload
-   ```
-
-The backend server will run on http://localhost:8000
-
-### Frontend Setup
-
-1. Install Node.js dependencies:
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-2. Start the development server:
-   ```bash
-   npm start
-   ```
-
-The frontend application will run on http://localhost:3000
-
 ## Usage
 
 1. Open your browser and navigate to http://localhost:3000
@@ -105,10 +66,11 @@ This repository includes:
 
 ## 🎬 Demo
 
-Watch our video demonstration to see the app in action:
+Check out our visual demonstration to see the app in action:
 
 
-https://github.com/user-attachments/assets/1db2065e-766a-47f5-b23a-56aad8938841
+![image](https://github.com/user-attachments/assets/84be51f8-5088-4b40-b145-6392102badb0)
+
 
 
 ## ✨ Features
@@ -129,12 +91,10 @@ This repository is updated regularly to ensure the content remains current and r
 
 - **Framework**: Built with Streamlit for rapid development and easy deployment
 - **Data Sources**: Aggregates news from 12+ leading AI publications including:
-  - Google DeepMind Blog
-  - OpenAI News
-  - MIT Technology Review
-  - NVIDIA Blog
-  - Microsoft Research
-  - The Berkeley AI Research Blog
+  - Cars Arstechnica
+  - Tech Crunch Waymo
+  - deeplearning.ai
+  - The Last Driver License Holder
   - And more...
 - **Automatic Content Processing**: Handles different date formats and content structures
 - **Parallel Processing**: Uses concurrent fetching for faster data retrieval
@@ -162,7 +122,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or suggestions, feel free to:
 - Open an issue in this repository
-- Contact the repository owner (Buse Koseoglu) through GitHub
+- Contact with me on [Linkedin]([url](https://www.linkedin.com/in/semi/)). 
 
 ## ⭐ Star This Repository
 
@@ -170,5 +130,4 @@ If you find this repository useful, please consider giving it a star to help oth
 
 ---
 
-Created and maintained by [Buse Koseoglu](https://github.com/busekoseoglu)
->>>>>>> 8e640c3bc8bc9b57b2b196b1224cc7ee4069d4b2
+Created and maintained by [Buse Koseoglu](https://github.com/venturero)
