@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import feedparser
 import pandas as pd
 from datetime import datetime, timedelta
@@ -268,7 +267,7 @@ def main():
 if __name__ == "__main__":
     df = main()
     print(df.head())
-=======
+
 import feedparser
 import pandas as pd
 from datetime import datetime, timedelta
@@ -538,5 +537,4 @@ def main():
 if __name__ == "__main__":
     df = main()
     print(df.head())
->>>>>>> 8e640c3bc8bc9b57b2b196b1224cc7ee4069d4b2
     df.to_excel("ai_news.xlsx")
