@@ -29,7 +29,6 @@ latest-ai-news/
 └── README.md            # Project documentation
 ```
 
-## Setup Instructions
 ## Usage
 
 1. Open your browser and navigate to http://localhost:3000
